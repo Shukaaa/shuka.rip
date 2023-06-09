@@ -1,0 +1,17 @@
+@import "../../../../variables";
+
+#square {
+  transition:
+    $transition-time width ease-in-out,
+    $transition-time height ease-in-out,
+    $transition-time / 2 transform ease-in-out,
+    $transition-time background-color ease-in-out;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 15px;
+  width: 15px;
+  z-index: -1;
+
+  background-color: $text-color;
+}

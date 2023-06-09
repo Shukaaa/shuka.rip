@@ -1,11 +1,11 @@
-<div id="square"></div>
+<!-- Square is the cursor replacement -->
+<app-square></app-square>
+<!-- Sizer is the icon at the right top, to in- or decrease the content -->
+<app-sizer></app-sizer>
+<!-- Nav is the navigation bar at top of the page -->
+<app-nav></app-nav>
 
-<nav>
-  <h1 *ngFor="let page of pages" [id]="page">{{ page }}</h1>
-</nav>
+<!-- Main Content -->
+<div class="content" id="content">
 
-<div class="content">
-  <div id="sizer">
-    <i id="sizer-icon" class="fa-solid fa-{{ sizer_state }}"></i>
-  </div>
 </div>
