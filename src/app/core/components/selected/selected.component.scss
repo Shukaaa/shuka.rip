@@ -1,0 +1,11 @@
+@import "../../../../variables";
+
+#selected {
+  transition: $transition-time transform ease-in-out;
+
+  position: absolute;
+  left: $space-around;
+  top: $space-around;
+  padding: 0.5em;
+  transform: translateY(-100px);
+}
