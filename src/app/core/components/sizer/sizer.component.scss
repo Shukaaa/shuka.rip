@@ -3,11 +3,10 @@
 #sizer {
   transition: $transition-time color ease-in-out;
 
-  $space-around: 5px;
   position: absolute;
-  height: 30px;
-  width: 30px;
+  height: $sizer-width;
+  width: $sizer-width;
   right: $space-around;
   top: $space-around;
-  padding: 0.5em;
+  padding: $sizer-padding;
 }

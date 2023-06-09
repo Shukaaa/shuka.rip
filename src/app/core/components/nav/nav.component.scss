@@ -1,8 +1,7 @@
 @import "../../../../variables";
 
 nav {
-  transition:
-    $transition-time transform ease-in-out;
+  transition: $transition-time transform ease-in-out;
 
   display: flex;
   justify-content: space-between;

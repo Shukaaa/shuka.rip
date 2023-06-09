@@ -1,5 +1,6 @@
 import {AfterViewInit, Component} from '@angular/core';
 import {HoverEffectUtil} from "../../utils/HoverEffectUtil";
+import {pages} from "../../utils/Consts";
 
 @Component({
   selector: 'app-nav',
@@ -7,14 +8,11 @@ import {HoverEffectUtil} from "../../utils/HoverEffectUtil";
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements AfterViewInit {
-  pages = [
-    "Home",
-    "About",
-    "Projects",
-    "Contact"
-  ]
+  pages = pages;
 
   ngAfterViewInit() {
+    window.location.hash = this.pages[0];
+
     for (const page of this.pages) {
       let element = document.getElementById(page);
 
@@ -22,5 +20,9 @@ export class NavComponent implements AfterViewInit {
         HoverEffectUtil.setHoverEffect(element);
       }
     }
+  }
+
+  changePage(page: string) {
+    window.location.hash = page;
   }
 }

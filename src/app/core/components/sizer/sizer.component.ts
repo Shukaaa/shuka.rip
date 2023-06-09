@@ -22,6 +22,8 @@ export class SizerComponent implements AfterViewInit {
   public toggleSizer() {
     let content = document.getElementById('content');
     let nav = document.getElementById('nav');
+    let selected = document.getElementById('selected');
+    let divider = document.getElementById('divider');
 
     if (this.sizer_state === 'expand') {
       this.sizer_state = 'compress';
@@ -33,8 +35,11 @@ export class SizerComponent implements AfterViewInit {
         content.style.width = '100%';
         content.style.height = '100%';
 
-        if (nav) {
+        if (nav && selected && divider) {
           nav.style.transform = 'translateY(-100px)';
+          selected.style.transform = 'translateY(0px)';
+          divider.style.transform = 'translateY(0px)';
+          divider.style.left = '0';
         }
       }
     } else {
@@ -44,8 +49,10 @@ export class SizerComponent implements AfterViewInit {
         content.style.width = this.oldWidth + 'px';
         content.style.height = this.oldHeight + 'px';
 
-        if (nav) {
+        if (nav && selected && divider) {
           nav.style.transform = 'translateY(0px)';
+          selected.style.transform = 'translateY(-100px)';
+          divider.style.transform = 'translateY(-100px)';
         }
       }
     }
