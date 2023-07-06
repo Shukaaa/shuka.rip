@@ -14,4 +14,7 @@
   z-index: -1;
 
   background-color: $text-color;
+  border: $background-color solid 1px;
+  border-radius: 1px;
+  display: none;
 }

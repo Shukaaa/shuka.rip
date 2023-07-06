@@ -7,7 +7,6 @@ import { NavComponent } from './core/components/nav/nav.component';
 import { SquareComponent } from './core/components/square/square.component';
 import { SelectedComponent } from './core/components/selected/selected.component';
 import { HomeComponent } from './core/views/home/home.component';
-import { AboutComponent } from './core/views/about/about.component';
 import { ProjectsComponent } from './core/views/projects/projects.component';
 import { ContactComponent } from './core/views/contact/contact.component';
 
@@ -19,7 +18,6 @@ import { ContactComponent } from './core/views/contact/contact.component';
     SquareComponent,
     SelectedComponent,
     HomeComponent,
-    AboutComponent,
     ProjectsComponent,
     ContactComponent
   ],

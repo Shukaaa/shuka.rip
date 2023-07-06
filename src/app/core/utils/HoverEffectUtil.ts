@@ -31,6 +31,7 @@ export class HoverEffectUtil {
       if (square && element) {
         square.style.width = width + 'px';
         square.style.height = height + 'px';
+        square.style.display = 'block';
         // chose the color in a row
         element.style.color = this.intenseColors[this.getColorIndex()];
 
@@ -50,8 +51,9 @@ export class HoverEffectUtil {
       if (square && element) {
         square.style.width = '15px';
         square.style.height = '15px';
-        element.style.color = '#fff';
-        square.style.backgroundColor = '#fff';
+        square.style.display = 'none';
+        element.style.color = '#333';
+        square.style.backgroundColor = '#333';
       }
     });
   }

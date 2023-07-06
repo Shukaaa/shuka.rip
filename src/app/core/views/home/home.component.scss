@@ -1,0 +1,56 @@
+.hello {
+  width: 50px;
+  height: 30px;
+}
+
+i {
+  text-decoration: none;
+
+  &.colorful {
+    animation: color 5s infinite;
+  }
+
+  &.shadow-dance {
+    animation: shadow-dance 3s infinite;
+  }
+
+  &.flash {
+    animation: flash 1s infinite;
+  }
+}
+
+@keyframes color {
+  0% {
+    color: #ff0000;
+  }
+  50% {
+    color: #00ff00;
+  }
+  100% {
+    color: #0000ff;
+  }
+}
+
+@keyframes shadow-dance {
+  0% {
+    text-shadow: 0 0 8px #ff0000;
+  }
+  50% {
+    text-shadow: 0 0 26px #00ff00;
+  }
+  100% {
+    text-shadow: 0 0 8px #0000ff;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
