@@ -1,0 +1,22 @@
+// fly to the bottom right corner
+@keyframes fly-away {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(25vw, 25vh) rotate(360deg);
+  }
+  50% {
+    transform: translate(50vw, 50vh) rotate(0deg);
+  }
+  75% {
+    transform: translate(75vw, 75vh) rotate(360deg);
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(0deg);
+  }
+}
+
+@mixin anim-fly-away {
+  animation: fly-away 1s ease-in-out;
+}

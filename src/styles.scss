@@ -17,8 +17,12 @@ body {
   height: 100vh;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+a {
+  &:hover {
+    cursor: not-allowed;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
 }

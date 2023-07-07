@@ -8,6 +8,7 @@ import { SquareComponent } from './core/components/square/square.component';
 import { HomeComponent } from './core/views/home/home.component';
 import { ProjectsComponent } from './core/views/projects/projects.component';
 import { ContactComponent } from './core/views/contact/contact.component';
+import {GudBadgeComponent} from "./core/components/gud-badge/gud-badge.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ContactComponent } from './core/views/contact/contact.component';
     SquareComponent,
     HomeComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    GudBadgeComponent
   ],
   imports: [
     BrowserModule

@@ -11,4 +11,9 @@
   padding: $sizer-padding;
 
   z-index: 1000;
+
+  // when the user uses a phone hide the sizer
+  @media (max-width: $phone-width) {
+    display: none;
+  }
 }

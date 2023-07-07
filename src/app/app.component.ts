@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {SvgBackgroundUtils} from "./core/utils/SvgBackgroundUtils";
 import {pages} from "./core/utils/Consts";
 
@@ -7,12 +7,18 @@ import {pages} from "./core/utils/Consts";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   pages: HTMLElement[] = []
+  hash: string = "";
+  initialPageIsLoaded: boolean = false;
+
+  ngOnInit() {
+    this.hash = window.location.hash.replace('#', '') || pages[0];
+  }
 
   ngAfterViewInit() {
     window.addEventListener('hashchange', () => {
-      this.triggerSection(window.location.hash.replace('#', ''));
+        this.triggerSection(window.location.hash.replace('#', ''));
     });
 
     for (const page of pages) {

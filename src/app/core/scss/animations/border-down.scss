@@ -1,0 +1,15 @@
+@keyframes border-down {
+  0% {
+    border-bottom: 1px solid #fff;
+  }
+  50% {
+    border-bottom: 2px solid #333;
+  }
+  100% {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+@mixin anim-border-down {
+  animation: border-down 0.69s ease infinite;
+}

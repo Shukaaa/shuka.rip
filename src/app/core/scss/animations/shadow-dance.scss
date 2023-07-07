@@ -1,0 +1,38 @@
+$germany-color-map: (
+  0%: #000000,
+  50%: #ff0000,
+  100%: #ffff00
+);
+
+$regiocom-color-map: (
+  0%: hsl(224, 65%, 50%),
+  50%: hsl(19, 100%, 50%),
+  100%: hsl(159, 100%, 30%)
+);
+
+$shadow-dance-color-maps: (
+  de: $germany-color-map,
+  rc: $regiocom-color-map
+);
+
+@each $key, $value in $shadow-dance-color-maps {
+  $color1: map-get($value, 0%);
+  $color2: map-get($value, 50%);
+  $color3: map-get($value, 100%);
+
+  @keyframes shadow-dance-#{$key} {
+    0% {
+      text-shadow: 0 0 8px $color1;
+    }
+    50% {
+      text-shadow: 0 0 26px $color2;
+    }
+    100% {
+      text-shadow: 0 0 8px $color3;
+    }
+  }
+}
+
+@mixin anim-shadow-dance($suffix) {
+  animation: shadow-dance-#{$suffix} 3.5s infinite;
+}

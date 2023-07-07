@@ -1,0 +1,12 @@
+@keyframes flashy-hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@mixin anim-flashy-hue {
+  animation: flashy-hue 1s infinite, size 1s infinite;
+}

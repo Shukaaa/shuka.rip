@@ -17,15 +17,22 @@ export class SizerComponent implements AfterViewInit {
     if (sizer) {
       HoverEffectUtil.setHoverEffect(sizer, 25, 25);
     }
+
+    // check if the user is on a mobile device, if yes trigger the sizer
+    if (window.innerWidth <= 768) {
+      this.toggleSizer();
+    }
   }
 
   public toggleSizer() {
     let content = document.getElementById('content');
     let nav = document.getElementById('nav');
     let selected = document.getElementById('selected');
+    let gudBadge = document.getElementById('gud-badge');
 
     if (this.sizer_state === 'expand') {
       this.sizer_state = 'compress';
+      gudBadge?.classList.add('disappear');
 
       if (content) {
         this.oldWidth = content.style.width ? parseInt(content.style.width) : content.clientWidth;
@@ -41,6 +48,7 @@ export class SizerComponent implements AfterViewInit {
       }
     } else {
       this.sizer_state = 'expand';
+      gudBadge?.classList.remove('disappear');
 
       if (content) {
         content.style.width = this.oldWidth + 'px';
