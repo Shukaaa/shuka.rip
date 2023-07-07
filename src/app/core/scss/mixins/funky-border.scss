@@ -1,0 +1,22 @@
+@mixin funky-border() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 200% 100%;
+  animation: gradient-animation 5s linear infinite;
+  width: 90.5vw;
+  height: 86vh;
+  z-index: -10000;
+  border-radius: 20px;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}

@@ -3,3 +3,5 @@ export const pages = [
     "Projects",
     "Contact"
 ];
+
+export const defaultAudioVolume = 30; // percent

@@ -23,6 +23,12 @@
     animation-fill-mode: forwards;
   }
 
+  &.appear {
+    @include anim-fly-away;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+  }
+
   @media (max-width: $phone-width) {
     display: none;
   }

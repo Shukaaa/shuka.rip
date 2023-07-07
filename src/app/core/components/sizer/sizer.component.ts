@@ -29,10 +29,12 @@ export class SizerComponent implements AfterViewInit {
     let nav = document.getElementById('nav');
     let selected = document.getElementById('selected');
     let gudBadge = document.getElementById('gud-badge');
+    let audioPlayer = document.getElementById('audio-player');
 
     if (this.sizer_state === 'expand') {
       this.sizer_state = 'compress';
       gudBadge?.classList.add('disappear');
+      audioPlayer?.classList.add('on-collapse');
 
       if (content) {
         this.oldWidth = content.style.width ? parseInt(content.style.width) : content.clientWidth;
@@ -49,6 +51,8 @@ export class SizerComponent implements AfterViewInit {
     } else {
       this.sizer_state = 'expand';
       gudBadge?.classList.remove('disappear');
+
+      audioPlayer?.classList.remove('on-collapse');
 
       if (content) {
         content.style.width = this.oldWidth + 'px';

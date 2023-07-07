@@ -1,4 +1,4 @@
-<h1>shuka.rip</h1>
+<h1 class="title">shuka.rip</h1>
 
 Welcome to my portfolio website!<br/>
 <br/><br/>
@@ -9,12 +9,21 @@ specifically from the beautiful city of <span (mouseover)="showMd($event)" (mous
 Currently, I am working as an apprentice at <i class="shadow-dance-rc">regiocom SE</i>,
 where I have the opportunity to expand my skills and knowledge.<br/>
 <br/>
-I have a strong affinity for programming and enjoy working with various languages such as
-<span class="colorful">J</span>ava,
-<span class="colorful">K</span>otlin,
-<span class="colorful">T</span>ypeScript,
-<span class="colorful">H</span>TML, and
-<span class="colorful">C</span>SS / <span class="colorful">S</span>CSS.<br/>
+I have a strong affinity for programming and enjoy working with various languages such as:
+<ul>
+  <li><span class="colorful">J</span>ava</li>
+  <li><span class="colorful">K</span>otlin</li>
+  <li><span class="colorful">T</span>ypeScript / <span class="colorful">J</span>avaScript</li>
+  <li><span class="colorful">H</span>TML</li>
+  <li><span class="colorful">C</span>SS / <span class="colorful">S</span>CSS</li>
+  <li><span class="colorful">P</span>ithon</li>
+</ul><br/>
+and frameworks like:
+<ul>
+  <li><span class="colorful">A</span>ngular (Web FW)</li>
+  <li><span class="colorful">I</span>onic (App FW)</li>
+  <li><span class="colorful">S</span>pring Boot (APIs)</li>
+</ul><br/>
 Recently, I've been delving into game development, app development, and even operating system development.<br/>
 I'm currently exploring languages like Go, C, C#, and more.<br/>
 <br/>
@@ -22,3 +31,10 @@ Feel free to browse through my portfolio and check out some of the <a href="#Pro
 If you have any questions, don't hesitate to <a href="#Contact">reach out</a> to me.<br/>
 <br/>
 <i class="border-down">Thank you for visiting, and I hope you enjoy exploring my work!</i>
+<br>
+<br>
+<a href="#Home" (click)="toggleVideo()">funny video</a>
+<video [volume]="0" width="320" height="240" style="display: none" autoplay>
+  <source src="assets/fish.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>

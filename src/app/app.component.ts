@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {SvgBackgroundUtils} from "./core/utils/SvgBackgroundUtils";
-import {pages} from "./core/utils/Consts";
+import {defaultAudioVolume, pages} from "./core/utils/Consts";
+import {AudioPlayer} from "./core/utils/AudioPlayer";
 
 @Component({
   selector: 'app-root',
@@ -14,11 +15,13 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     this.hash = window.location.hash.replace('#', '') || pages[0];
+    AudioPlayer.init();
+    AudioPlayer.changeVolume(defaultAudioVolume / 100);
   }
 
-  ngAfterViewInit() {
+  async ngAfterViewInit() {
     window.addEventListener('hashchange', () => {
-        this.triggerSection(window.location.hash.replace('#', ''));
+      this.triggerSection(window.location.hash.replace('#', ''));
     });
 
     for (const page of pages) {

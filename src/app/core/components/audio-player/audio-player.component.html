@@ -1,0 +1,5 @@
+<div id="audio-player">
+  <label>awesum musik player</label>
+  <i class="fa-solid fa-{{state}}" (click)="triggerPlay()"></i>
+  <input type="range" min="1" max="100" [value]="defaultAudioVolume" (change)="triggerVolume($event)">
+</div>

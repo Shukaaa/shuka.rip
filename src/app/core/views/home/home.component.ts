@@ -13,4 +13,14 @@ export class HomeComponent{
   hideMd(event: any) {
     event.target.innerText = 'Magdeburg';
   }
+
+  toggleVideo() {
+    let video = document.getElementsByTagName('video')[0];
+    if (video.style.display === 'none') {
+      video.style.display = 'block';
+      return;
+    }
+
+    video.style.display = 'none';
+  }
 }
