@@ -18,6 +18,11 @@
     @include anim-flashy-hue;
   }
 
+  &.disappear {
+    @include anim-fly-away;
+    animation-fill-mode: forwards;
+  }
+
   @media (max-width: $phone-width) {
     display: none;
   }
