@@ -19,6 +19,10 @@
     bottom: 1dvh;
     left: 0.75dvw;
   }
+
+  @media (max-width: $phone-width) {
+    display: none;
+  }
 }
 
 input {
