@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-
+  site = {
+    email: "speed@purplehead.digital",
+    instagram: "https://www.instagram.com/speed.phnk/",
+  }
 }
