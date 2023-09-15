@@ -28,7 +28,7 @@ export const projects: Project[] = [
   {
     name: "Anime Higher Lower Game",
     description: "A game where you guess which anime or manga is more popular. There are 5 different difficulties, and you can choose between anime or manga. The given Information is provided by the Jikan API.",
-    link: "projects/anime-higher-lower-game",
+    link: "projects/anime-higher-lower",
     repository: "Shukaaa/anime-higher-lower",
     image: "assets/img/projects/anime-higher-lower.png",
     tags: [ProjectTag.WebApp],
