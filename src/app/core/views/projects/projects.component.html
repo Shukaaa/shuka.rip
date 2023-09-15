@@ -1,1 +1,56 @@
 <h1 class="title">Projects</h1>
+
+Here are some of the projects I've worked on. <br/>
+
+<div class="tag-filter">
+  <span>Filter for Tags:</span>
+  <select class="tag-filter-select" (change)="changedTag($event)" id="select">
+    <option value="All">All</option>
+    <option *ngFor="let tag of allTags" value="{{tag}}">{{tag}}</option>
+  </select>
+</div>
+
+<div class="tag-filter">
+  <span>Filter for Technology:</span>
+  <select class="tag-filter-select" (change)="changedTechnology($event)" id="select-technology">
+    <option value="All">All</option>
+    <option *ngFor="let tag of allTechnologies" value="{{tag}}">{{tag}}</option>
+  </select>
+</div>
+
+<button (click)="resetFilter()">
+  Reset Filters
+</button>
+
+<div class="projects">
+  <ng-container *ngFor="let project of projects">
+    <div *ngIf="containsTag(project)" class="project">
+      <h3>{{project.name}}</h3>
+      <div class="project-information">
+        <div>
+          <img src="{{project.image}}" alt="no image right now :(" (click)="enlargeImage(project.image)">
+        </div>
+        <div>
+          <p>{{project.description}}</p>
+          <div class="project-links">
+            <a href="https://github.com/{{project.repository}}">GitHub</a>
+            <a *ngIf="project.link != ''" href="{{project.link}}">Page</a>
+            <a *ngIf="project.link == ''" class="no-page">No Page Available</a>
+          </div>
+          <div class="project-tags">
+            <span>Tags:</span>
+            <div *ngFor="let tag of project.tags" class="project-tag">
+              <span (click)="changeTag(tag)">{{tag}}</span>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span>Technologies:</span>
+            <div *ngFor="let tag of project.technologies" class="project-tag">
+              <span (click)="changeTechnology(tag)">{{tag}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

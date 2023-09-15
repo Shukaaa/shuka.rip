@@ -9,10 +9,15 @@
 <!-- Audio Player -->
 <app-audio-player></app-audio-player>
 
+<div id="enlarged-image-div" style="display: none">
+  <img id="enlarged-image" alt="image"> <br/>
+  <span (click)="closeEnlargedImage()" id="close-text">Close Image</span>
+</div>
+
 <!-- Main Content -->
 <div class="wtf"></div>
 <div class="content" id="content">
-  <div class="wrapper">
+  <div class="wrapper blur">
     <view-home id="SecHome"></view-home>
     <view-projects id="SecProjects" style="display: none"></view-projects>
     <view-contact id="SecContact" style="display: none"></view-contact>

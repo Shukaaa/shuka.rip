@@ -1,0 +1,108 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  width: 80%;
+  margin: 20px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.project-information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-links {
+  padding: 10px 0;
+
+  a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+
+    &:hover {
+      background-color: black;
+      color: white !important;
+    }
+
+    &:visited {
+      color: black;
+    }
+
+    &:active {
+      color: black;
+    }
+  }
+}
+
+img {
+  width: calc(1920px / 5);
+  height: calc(1080px / 6);
+
+  object-fit: cover;
+
+  cursor: wait;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 0.25em;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .project-information {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
+    width: 100%;
+  }
+}
+
+.project-tag {
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 2px 0;
+
+  span {
+    padding-top: 4px;
+    padding-right: 2px;
+  }
+}
+
+.tag-filter {
+  margin-right: 5px;
+  padding-top: 5px;
+  font-size: 0.8rem;
+}
+
+.tag-filter-select {
+  margin-left: 5px;
+}

@@ -1,7 +1,7 @@
 export class AudioPlayer {
   public static audio?: HTMLAudioElement;
   public static init() {
-    this.audio = new Audio("assets/funkiiii.mp3");
+    this.audio = new Audio("assets/audio/funkiiii.mp3");
     this.audio.loop = true;
   }
 

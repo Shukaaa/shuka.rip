@@ -2,6 +2,7 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {SvgBackgroundUtils} from "./core/utils/SvgBackgroundUtils";
 import {defaultAudioVolume, pages} from "./core/utils/Consts";
 import {AudioPlayer} from "./core/utils/AudioPlayer";
+import {EnlargeImageUtils} from "./core/utils/EnlargeImageUtils";
 
 @Component({
   selector: 'app-root',
@@ -48,5 +49,9 @@ export class AppComponent implements AfterViewInit, OnInit {
         page.style.display = 'none';
       }
     }
+  }
+
+  public closeEnlargedImage() {
+    EnlargeImageUtils.closeEnlargedImage();
   }
 }

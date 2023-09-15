@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {contact} from "../../utils/Consts";
 
 @Component({
   selector: 'view-contact',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   site = {
-    email: "speed@purplehead.digital",
-    instagram: "https://www.instagram.com/speed.phnk/",
+    email: contact.email,
+    instagram: contact.instagram,
   }
 }
