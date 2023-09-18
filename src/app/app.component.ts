@@ -11,18 +11,15 @@ import {EnlargeImageUtils} from "./core/utils/EnlargeImageUtils";
 })
 export class AppComponent implements AfterViewInit, OnInit {
   pages: HTMLElement[] = []
-  hash: string = "";
-  initialPageIsLoaded: boolean = false;
 
   ngOnInit() {
-    this.hash = window.location.hash.replace('#', '') || pages[0];
     AudioPlayer.init();
     AudioPlayer.changeVolume(defaultAudioVolume / 100);
   }
 
   async ngAfterViewInit() {
-    window.addEventListener('hashchange', () => {
-      this.triggerSection(window.location.hash.replace('#', ''));
+    window.addEventListener("hashchange", () => {
+      this.changeSection();
     });
 
     for (const page of pages) {
@@ -33,14 +30,21 @@ export class AppComponent implements AfterViewInit, OnInit {
       }
     }
 
+    this.changeSection();
     SvgBackgroundUtils.init();
   }
 
-  triggerSection(section: string) {
+  public changeSection() {
+    const hash = window.location.hash.substr(1);
+    this.triggerSection(hash);
+  }
+
+  private triggerSection(section: string) {
     const element = document.getElementById("Sec" + section);
 
     if (element) {
       for (const page of this.pages) {
+
         if (page.id === "Sec" + section) {
           page.style.display = 'block';
           continue;

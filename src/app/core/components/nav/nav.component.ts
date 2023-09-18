@@ -11,8 +11,6 @@ export class NavComponent implements AfterViewInit {
   pages = pages;
 
   ngAfterViewInit() {
-    window.location.hash = this.pages[0];
-
     for (const page of this.pages) {
       let element = document.getElementById(page);
 
